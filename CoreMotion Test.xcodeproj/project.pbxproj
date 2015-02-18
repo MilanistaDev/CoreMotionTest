@@ -14,6 +14,7 @@
 		FDBE046A1A8EBBDD00DFDFAC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDBE04691A8EBBDD00DFDFAC /* Images.xcassets */; };
 		FDBE046D1A8EBBDD00DFDFAC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDBE046B1A8EBBDD00DFDFAC /* LaunchScreen.xib */; };
 		FDBE04791A8EBBDD00DFDFAC /* CoreMotion_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDBE04781A8EBBDD00DFDFAC /* CoreMotion_TestTests.m */; };
+		FDBE04831A8EC12000DFDFAC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBE04821A8EC12000DFDFAC /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		FDBE04721A8EBBDD00DFDFAC /* CoreMotion TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreMotion TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBE04771A8EBBDD00DFDFAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDBE04781A8EBBDD00DFDFAC /* CoreMotion_TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreMotion_TestTests.m; sourceTree = "<group>"; };
+		FDBE04821A8EC12000DFDFAC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDBE04831A8EC12000DFDFAC /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		FDBE04501A8EBBDD00DFDFAC = {
 			isa = PBXGroup;
 			children = (
+				FDBE04821A8EC12000DFDFAC /* CoreMotion.framework */,
 				FDBE045B1A8EBBDD00DFDFAC /* CoreMotion Test */,
 				FDBE04751A8EBBDD00DFDFAC /* CoreMotion TestTests */,
 				FDBE045A1A8EBBDD00DFDFAC /* Products */,
@@ -168,6 +172,11 @@
 				TargetAttributes = {
 					FDBE04581A8EBBDD00DFDFAC = {
 						CreatedOnToolsVersion = 6.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					FDBE04711A8EBBDD00DFDFAC = {
 						CreatedOnToolsVersion = 6.3;
@@ -346,6 +355,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CoreMotion Test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -356,6 +366,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CoreMotion Test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
