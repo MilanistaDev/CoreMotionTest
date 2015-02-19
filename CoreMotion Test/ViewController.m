@@ -301,6 +301,8 @@
         
         _stepLabel.text = @"Not supported";
         _weeklystepsLabel.text = @"Not supported";
+        _distanceLabel.text = @"Not supported";
+        _weeklydistanceLabel.text = @"Not supported";
         
     // 歩数取得可能の場合
     } else {
