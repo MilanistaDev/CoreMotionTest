@@ -408,10 +408,16 @@
                                            withHandler:^(CMAltitudeData *altitudeData, NSError *error) {
             
             // 高度が更新されるたびにリアルタイムでラベル更新
-            self.stepLabel.text = [NSString stringWithFormat:@"%@", altitudeData.relativeAltitude];
+            // relativeAltitude なのでそんなに大きな値はでない？マイナスもありうる。
+            NSNumber *altitude_value = altitudeData.relativeAltitude;
+            double altitude_f = [altitude_value doubleValue];
+            self.altitudeLabel.text = [NSString stringWithFormat:@"%.2f [m]", altitude_f];
             
             // 気圧が更新されるたびにリアルタイムでラベル更新
-            self.stepLabel.text = [NSString stringWithFormat:@"%@", altitudeData.pressure];
+            // 得られるのは kPa だそう。*10 して見慣れた hPa にする
+            NSNumber *pressure_value = altitudeData.pressure;
+            double pressure_f = [pressure_value doubleValue];
+            self.pressureLabel.text = [NSString stringWithFormat:@"%.2f [hPa]", pressure_f*10];
             
         }];
     }
